@@ -1,0 +1,500 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap");
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+  --dark-gray: hsl(0, 0%, 55%);
+  --very-dark-gray: hsl(0, 0%, 41%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+p {
+  font-family: "Alata", sans-serif;
+  font-size: 15px;
+  color: var(--very-dark-gray);
+}
+
+button {
+  background-color: transparent;
+  font-family: "Alata", sans-serif;
+  border: 0;
+  color: white;
+  cursor: pointer;
+}
+
+/*--------------- Header ---------------*/
+.header {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 20px;
+}
+
+.header nav {
+  /* height: 0;
+  overflow: hidden; */
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  min-height: 100vh;
+}
+
+.header nav.open {
+  display: block;
+}
+
+.header nav .nav-logo {
+  padding: 25px;
+}
+
+.header nav ul {
+  padding-top: 100px;
+  padding-left: 20px;
+}
+
+.header nav ul li {
+  margin-bottom: 20px;
+}
+
+.header nav ul li button {
+  text-transform: uppercase;
+  font-size: 36px;
+}
+
+.header .menu-btn {
+  padding: 20px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.header .menu-btn.rotate {
+  margin-top: 8px;
+}
+
+.header .menu-btn.rotate .bar-1 {
+  transform: rotate(40deg);
+}
+
+.header .menu-btn.rotate .bar-2 {
+  opacity: 0;
+}
+
+.header .menu-btn.rotate .bar-3 {
+  transform: rotate(-40deg);
+  margin-top: -16px;
+}
+
+.header .menu-btn .bar {
+  width: 35px;
+  height: 3px;
+  background-color: #fff;
+  margin: 0 0 5px;
+}
+
+/*--------------- Showcase ---------------*/
+.showcase {
+  background: url("./images/mobile/image-hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 700px;
+}
+
+.showcase .overlay {
+  display: flex;
+  align-items: center;
+  height: 700px;
+  padding: 0 30px;
+}
+
+.showcase .overlay h1 {
+  color: #fff;
+  font-size: 46px;
+  line-height: 1.1;
+  border: 2px solid #fff;
+  padding: 30px;
+  max-width: 468px;
+}
+
+/*--------------- Interactive ---------------*/
+.interactive {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.interactive-text {
+  padding: 0 40px;
+}
+
+.interactive .interactive-text h2 {
+  padding: 30px 0 20px;
+  line-height: 1.3;
+}
+
+/*--------------- Creations-mobile ---------------*/
+.creations-mobile {
+  padding: 0 20px 50px;
+}
+
+.creations-mobile h2 {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.creations-mobile article {
+  position: relative;
+}
+
+.creations-mobile article:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.creations-mobile h3 {
+  position: absolute;
+  bottom: 0;
+  padding: 0 0 20px 20px;
+  color: #fff;
+  font-size: 24px;
+  width: 150px;
+  line-height: 1.3;
+}
+
+.creations-mobile section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  place-items: center;
+}
+
+.creations-mobile .btn-container {
+  text-align: center;
+  padding: 30px 0;
+}
+
+.creations-mobile .btn-container .btn {
+  border: 2px solid black;
+  padding: 10px 30px;
+  color: black;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.creations-mobile .btn-container .btn:hover {
+  background-color: black;
+  color: #fff;
+}
+
+.creations-desktop {
+  display: none;
+}
+
+/*--------------- Footer ---------------*/
+.footer {
+  background-color: black;
+  color: #fff;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.footer .logo img {
+  margin-bottom: 20px;
+}
+
+.footer ul {
+  margin-bottom: 30px;
+}
+
+.footer ul li {
+  margin-bottom: 20px;
+}
+
+.footer .social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer .social li {
+  margin-bottom: 0;
+  margin-right: 20px;
+  font-size: 24px;
+}
+
+.footer .copyright {
+  font-family: "Alata", sans-serif;
+  font-size: 15px;
+  color: var(--dark-gray);
+}
+
+/*--------------- MEDIA QUERIES ---------------*/
+
+@media (min-width: 768px) {
+  .showcase .overlay h1 {
+    max-width: 605px;
+    font-size: 60px;
+    padding: 50px;
+  }
+
+  .showcase .overlay {
+    height: 700px;
+  }
+
+  .footer {
+    text-align: initial;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer ul {
+    display: flex;
+  }
+
+  .footer ul li {
+    margin: 0 20px 0 0;
+  }
+
+  .footer ul li button {
+    font-size: 18px;
+  }
+
+  .footer .social {
+    display: flex;
+  }
+}
+
+/*-------------------------------------------------*/
+
+@media (min-width: 1024px) {
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 50px 50px;
+  }
+  .header .menu-btn {
+    display: none;
+  }
+
+  .header nav {
+    display: block;
+    background-color: transparent;
+  }
+
+  .header nav .nav-logo {
+    display: none;
+  }
+
+  .header nav ul {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    top: 50px;
+    right: 50px;
+    padding: 0;
+  }
+
+  .header nav ul li {
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+
+  .header nav ul li button {
+    text-transform: capitalize;
+    font-size: 18px;
+    text-decoration: none;
+    padding-bottom: 8px;
+  }
+
+  .header nav ul li .underline {
+    height: 2.8px;
+    background-color: transparent;
+    width: 0%;
+    transition: width 0.2s, background-color 0.5s;
+    margin: 0 auto;
+  }
+
+  .header nav ul li:hover .underline {
+    background-color: white;
+    width: 50%;
+  }
+
+  .showcase {
+    background: url("./images/desktop/image-hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .showcase .overlay h1 {
+    width: 700px;
+    font-size: 64px;
+    margin-top: 100px;
+    padding: 50px;
+  }
+
+  .interactive {
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding-top: 50px;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+  .interactive img {
+    padding-bottom: 20px;
+  }
+
+  .interactive-text {
+    line-height: 25px;
+    position: absolute;
+    width: 550px;
+    height: 400px;
+    right: 20px;
+    bottom: 20px;
+    background-color: #fff;
+    max-width: 1200px;
+    padding: 60px;
+  }
+
+  .creations-mobile {
+    display: none;
+  }
+
+  .creations-desktop {
+    display: block;
+  }
+
+  .creations-desktop .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px 45px;
+  }
+
+  .creations-desktop .btn-container {
+    text-align: center;
+  }
+
+  .creations-desktop .btn-container .btn {
+    border: 2px solid black;
+    padding: 10px 40px;
+    color: black;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+
+  .creations-desktop .btn-container .btn:hover {
+    background-color: black;
+    color: #fff;
+  }
+
+  .creations-desktop section {
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    place-items: center;
+    gap: 50px;
+    margin: auto;
+    padding: 0 40px;
+    padding-bottom: 50px;
+  }
+
+  .creations-desktop article {
+    position: relative;
+  }
+
+  .creations-desktop article:hover {
+    opacity: 0.7;
+    cursor: pointer;
+  }
+
+  .creations-desktop h3 {
+    position: absolute;
+    bottom: 0;
+    padding: 0 0 20px 20px;
+    color: #fff;
+    font-size: 24px;
+    width: 150px;
+    line-height: 1.3;
+  }
+
+  .footer {
+    padding: 50px 150px;
+  }
+}
+
+/*-------------------------------------------------*/
+
+@media (min-width: 1280px) {
+  .header {
+    padding-top: 50px;
+    padding-left: 90px;
+  }
+
+  .header nav ul {
+    right: 90px;
+  }
+
+  .interactive {
+    margin: auto;
+    max-width: 1200px;
+  }
+
+  .showcase .overlay {
+    padding: 0;
+  }
+
+  .showcase .overlay h1 {
+    margin-left: 100px;
+  }
+
+  .creations-desktop .title {
+    max-width: 1300px;
+  }
+
+  .creations-desktop section {
+    max-width: 1300px;
+  }
+
+  .footer {
+    padding: 50px 250px;
+  }
+}
